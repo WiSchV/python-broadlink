@@ -316,7 +316,7 @@ class device:
             while True:
                 try:
                     conn.sendto(packet, self.host)
-                    conn.settimeout(1)
+                    conn.settimeout(3)
                     resp, _ = conn.recvfrom(2048)
                     break
                 except socket.timeout:
